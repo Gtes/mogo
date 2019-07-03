@@ -1,0 +1,32 @@
+.map{
+    margin-top: 115px;
+    @include image_gradient(90deg, $review_bg_overlay, $review_bg_overlay, $map_bg);
+    background-size: cover;
+
+    &-container{
+        margin: 55px 0;
+        text-align: center;
+    }
+    &__text{
+        display: block;
+        margin-top: 18px;
+        font-family: $montserrat;
+        font-size: 24px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $line;
+        position: relative;
+        
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            width: 60px;
+            height: 3px;
+            background: $line;
+            left: 50%;
+            bottom: -22px;
+            transform: translateX(-50%);
+        }
+    }
+}

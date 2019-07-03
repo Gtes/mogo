@@ -1,0 +1,168 @@
+.gallery-team {
+
+
+    &-container {
+        @include clearfix();
+        margin-top: 55px;
+    }
+
+    &__hover {
+        display: none;
+    }
+
+    &__item {
+        @include make-sm-column(12);
+        @include make-md-column(6);
+        @include make-lg-column(4);
+        position: relative;
+        margin-top: 30px;
+
+        &:hover .gallery-team__hover {
+            display: block;
+            position: absolute;
+            top: 43%;
+            left: 43%;
+            transform: translate(-44%, -44%);
+        }
+    }
+
+    &__image {
+        display: block;
+        height: 470px;
+
+        &_first {
+            background: $team_first_img no-repeat;
+            background-size: cover;
+
+
+            &:hover {
+                @include new_gallery_hover($team_first_img);
+                background-size: cover;
+            }
+        }
+
+        &_second {
+            background: $team_second_img;
+            background-size: cover;
+
+            &:hover {
+                @include new_gallery_hover($team_second_img);
+                background-size: cover;
+            }
+        }
+
+        &_third {
+            background: $team_third_img;
+            background-size: cover;
+
+            &:hover {
+                @include new_gallery_hover($team_third_img);
+                background-size: cover;
+            }
+        }
+    }
+
+    &__description {
+        text-align: center;
+        margin-top: 30px;
+    }
+
+    &__name {
+        font-size: 14px;
+        font-family: $montserrat;
+        color: $title_color;
+
+    }
+
+    &__position {
+        font-size: 15px;
+        font-family: $roboto;
+        font-weight: lighter;
+        font-style: italic;
+        color: $block_text;
+        margin-top: 15px;
+    }
+}
+
+.gallery__link_about {
+    &-first {
+        @include gallery_hover($about_first_img);
+    }
+
+    &-second {
+        @include gallery_hover($about_second_img);
+    }
+
+    &-third {
+        @include gallery_hover($about_third_img);
+    }
+
+}
+
+
+.social-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    &__item {
+        display: block;
+        float: left;
+
+
+        &:first-child {
+            border-left: none;
+        }
+    }
+
+    &__link {
+        display: block;
+        width: 50px;
+        height: 50px;
+        background-image: url(../img/team/social/social.png);
+        background-repeat: no-repeat;
+        background-color: $social_main_bg;
+        border-left: 1px solid $social_separator;
+
+
+
+
+        &-facebook {
+            background-position: -3px -59px;
+            border-left: none;
+
+            &:hover {
+                background-position: -3px -3px;
+                background-color: $social_hover_bg;
+
+            }
+        }
+
+        &-twitter {
+            background-position: -57px -57px;
+
+            &:hover {
+                background-position: -57px -2px;
+                background-color: $social_hover_bg;
+            }
+        }
+
+        &-printerest {
+            background-position: -114px -58px;
+
+            &:hover {
+                background-position: -114px -1px;
+                background-color: $social_hover_bg;
+            }
+        }
+
+        &-instagram {
+            background-position: -170px -58px;
+
+            &:hover {
+                background-position: -169px -3px;
+                background-color: $social_hover_bg;
+            }
+        }
+    }
+}

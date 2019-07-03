@@ -1,0 +1,36 @@
+.block-header {
+    &__maint-title {
+        font-family: $kaushan_script;
+        font-size: 24px;
+    }
+
+    &__sub-title {
+        display: block;
+        padding-top: 20px;
+        font-family: $montserrat;
+        font-size: 30px;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        &::after{
+            position: absolute;
+            content: '';
+            width: 70px;
+            border-top: 3px solid $line;
+            bottom: -40px;
+            margin: 0px auto;
+            left: 50%;
+            margin-left: -35px;
+        }
+    }
+
+    &__text {
+        margin-top: 90px;
+        font-family: $roboto;
+        font-size: 15px;
+        line-height: 24px;
+        font-weight: 400;
+        color: $block_text;
+    }
+}

@@ -1,0 +1,52 @@
+.feature {
+    @include image_gradient(360deg, $feature_bg_color, $feature_bg_color, $feature_bg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &__ipad {
+        // @include make-xs-column(12);
+        // @include make-sm-column(6);
+        // @include make-sm-column-offset(2);
+        // @include make-md-column(6);
+        // @include make-md-column-offset(3);
+        // @include make-lg-column(6);
+        // @include make-lg-column-offset(3);
+        // margin-left: 50%;
+        // transform: translateX(-50%);
+        @include make-lg-column(12);
+        margin-top: 15px;
+
+        text-align: center;
+
+        &-container {
+            display: inline-block;
+            position: relative;
+            top: 0;
+            left: 0;
+        }
+
+        &-img {
+            
+            position: relative;
+            top: 0;
+            left: 0;
+
+            @media screen and (max-width: 500px) {
+                width: 450px
+            }
+        }
+    }
+
+    &__iphone-img {
+        position: absolute;
+        top: 200px;
+        right: -160px;
+
+        @media screen and (max-width: 810px) {
+            top: 200px;
+            right: 0px;
+        }
+
+    }
+}

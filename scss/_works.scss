@@ -1,0 +1,124 @@
+.works {
+
+    @include clearfix();
+    &-container {
+        margin-top: 110px;
+    }
+
+    &__hover {
+        &-container {
+            position: absolute;
+            top: 42%;
+            left: 50%;
+            transform: translate(-50%);
+            text-align: center;
+        }
+
+        opacity: 0;
+
+        &:hover {
+            opacity: 1;
+        }
+
+    }
+
+    &__icon {
+        display: inline-block;
+    }
+
+    &__title {
+        margin-top: 20px;
+        display: block;
+        font-family: $montserrat;
+        font-size: 14px;
+        font-weight: 400;
+        color: $white;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        margin-top: 10px;
+        font-size: 15px;
+        font-family: $roboto;
+        font-weight: lighter;
+        font-style: italic;
+        color: $white;
+    }
+
+
+    &-images {
+        display: flex;
+
+        &__image {
+            position: relative;
+
+            &:hover .works__hover {
+                opacity: 1;
+            }
+
+        }
+
+
+        @media all and (max-width: 1200px) {
+            flex-wrap: wrap;
+        }
+
+        div {
+            height: 390px;
+            flex: 1 1 auto;
+            box-sizing: border-box;
+        }
+
+        &__image-1 {
+            @include gallery_hover($work_image_1);
+            background-size: cover;
+        }
+
+        &__image-2 {
+            @include gallery_hover($work_image_2);
+            background-size: cover;
+        }
+
+        &__image-3 {
+            @include gallery_hover($work_image_3);
+            background-size: cover;
+        }
+
+        &__image-4 {
+            @include gallery_hover($work_image_4);
+            background-size: cover;
+        }
+
+        .works-images__image-5 {
+            height: 780px;
+            @include gallery_hover($work_image_5);
+            background-size: cover;
+        }
+
+        &__image-6 {
+            @include gallery_hover($work_image_6);
+            background-size: cover;
+        }
+
+        &__image-7 {
+            @include gallery_hover($work_image_7);
+            background-size: cover;
+        }
+
+        &__block {
+            &-wrap-2 {
+                @media all and (max-width: 1200px) {
+                    order: 1;
+                }
+            }
+
+            &-wrap-3 {
+                @media all and (max-width: 1200px) {
+                    flex: 0 0 100%;
+                    order: 1;
+                    display: flex;
+                }
+            }
+        }
+    }
+}

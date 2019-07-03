@@ -1,0 +1,21 @@
+$feature_bg: url(../img/feature/featurebg.png);
+$feature_bg_color: rgba(255, 255, 255, 0.85);
+
+.feature {
+    @include image_gradient(360deg, $feature_bg_color, $feature_bg_color, $feature_bg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+    &__ipad {
+        margin-top: 90px;
+        position: relative;
+    }
+
+    &__iphone {
+        position: absolute;
+        right: -80px;
+        bottom: -90px;
+    }
+
+}

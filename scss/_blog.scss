@@ -1,0 +1,105 @@
+.blog {
+
+    &-container {
+        
+        margin-top: -10px;
+    }
+
+    &__item {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(4);
+        margin-top: 30px;
+        @media screen and (max-width: 768px) {
+            max-width: 400px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            
+            
+          }
+    }
+
+    &__image-container{
+        // background: url(../img/blog/img_1.png) no-repeat;
+        
+        position: relative;
+    }
+
+    &__image{
+        max-width: 360px;
+    }
+
+    &__date {
+        height: 70px;
+        width: 60px;
+        background: $fact_bg;
+        left: -15px;
+        bottom: 10px;
+        position: absolute;
+    }
+
+    &__number {
+        @include number();
+        font-size: 30px;
+        display: block;
+        text-align: center;
+        color: $white;
+        margin-top: 12px;
+        line-height: 30px;
+    }
+
+    &__month {
+        font-size: 15px;
+        font-family: $roboto;
+        font-weight: lighter;
+        font-style: italic;
+        color: $white;
+        // margin-top: 15px;
+        display: block;
+        text-align: center;
+    }
+
+    &__text-container {
+        margin-top: 20px;
+    }
+
+    &__title {
+        font-family: $montserrat;
+        font-size: 14px;
+        color: $title_color;
+        text-transform: uppercase;
+        font-weight: 500;
+    }
+
+    &__text-preview {
+        margin-top: 10px;
+        font-size: 15px;
+        line-height: 24px;
+        color: $description_color;
+        font-family: $roboto;
+        font-weight: 400;
+    }
+
+    &__views{
+        background: url(../img/blog/views_ic.png) left center no-repeat;
+        padding-left: 27px;
+        margin-right: 20px;
+        font-size: 15px;
+        line-height: 24px;
+        color: $description_color;
+        font-family: $roboto;
+        font-weight: lighter;
+        font-style: italic;
+
+        &_comments{
+            background: url(../img/blog/comments_ic.png) left center no-repeat;
+        }
+    }
+
+}
+
+.services__hr_blog {
+    margin-top: 6px;
+    margin-bottom: 20px;
+}

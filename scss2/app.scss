@@ -1,0 +1,31 @@
+@import "vars";
+@import "core";
+@import "../bootstrap-sass/assets/stylesheets/bootstrap";
+@import "fonts";
+@import "mixin";
+// @import "grid";
+@import "block-header";
+@import "gallery";
+@import "header";
+@import "about_us";
+@import "fact";
+@import "services";
+@import "feauture";
+@import "service-details";
+
+
+
+
+// /*boostrap grid*/
+// @import "../bootstrap/assets/stylesheets/bootstrap/variables";
+
+// /*Grid mixins (rows, columns for default screens):*/
+
+// @import "../bootstrap/assets/stylesheets/bootstrap/mixins/grid-framework";
+
+// /* Grid mixins (rows, columns for default screens):*/
+// @import "../bootstrap/assets/stylesheets/bootstrap/mixins/grid";
+
+// /* Grid classes (.row, .container, media queries):*/
+// @import "../bootstrap/assets/stylesheets/bootstrap/grid";
+

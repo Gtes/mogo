@@ -1,0 +1,111 @@
+.service-details {
+
+    &__accordion {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+
+        @media screen and (max-width: 991px) {
+            margin-top: 30px;
+        }
+    }
+
+    &__icon {
+        padding: 15px 15px;
+    }
+
+    &__content {
+
+        margin-top: 90px;
+    }
+
+    // &-container {}
+
+    &_heading {
+        margin-top: 90px;
+    }
+
+    &__image {
+        @include make-xs-column(12);
+        @include make-sm-column(12);
+        @include make-md-column(6);
+        @include make-lg-column(6);
+    }
+}
+
+/*
+* Accordion нашел здесь и переделал https://codepen.io/jonyablonski/pen/IrgBk
+*/
+
+/* Basic Accordion Styles */
+.accordion {
+    &__panel {
+        margin-bottom: 10px;
+        border: 1px solid $services_hr;
+    }
+
+    /* Radio Inputs */
+    input[name='panel'] {
+        display: none;
+    }
+
+    /* Labels */
+    label {
+        position: relative;
+        display: block;
+        font-size: 14px;
+        color: $title_color;
+        text-transform: uppercase;
+        font-family: $montserrat;
+        font-weight: 400;
+        cursor: pointer;
+        height: 38px;
+        margin: 0;
+
+        &:after {
+            content: $arrow_ic;
+            position: absolute;
+            right: 15px;
+            top: 20px;
+        }
+
+    }
+
+    input:checked+label {
+        border-bottom: 1px solid $services_hr;
+        height: 58px;
+
+        &:after {
+            content: $arrow_ic;
+            transform: rotate(180deg);
+            /* adjsut line-height to vertically center icon */
+        }
+
+    }
+
+    /* Panel Content */
+    &__content {
+        overflow: auto;
+        height: 0px;
+        position: relative;
+        margin-bottom: 20px;
+
+        .accordion__body {
+            padding: 20px;
+            font-family: $roboto;
+            font-size: 15px;
+            font-weight: lighter;
+            font-style: italic;
+            color: $block_text;
+        }
+    }
+}
+
+/* 
+* Size Variations
+*/
+
+input[name='panel']:checked~.accordion__content.accordion__content--small {
+    height: 140px;
+}

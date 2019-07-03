@@ -1,0 +1,53 @@
+.gallery {
+    $blockClass: &;
+
+    // &-container {}
+
+    &__item {
+        @include make-md-column(6);
+        @include make-lg-column(4);
+
+        &:last-child {
+            @include make-md-column(12);
+            @include make-lg-column(4);
+        }
+    }
+
+    &__hover {
+        display: none;
+    }
+
+    &__link {
+        display: block;
+        height: 250px;
+        background: url(../img/gallery/team_bg.png);
+
+        &:hover {
+            @include image_gradient(360deg, $sweet_corn, $froly, $img);
+            box-shadow: 15px 15px 0px 0px rgba(114, 218, 220, 1);
+            transform: translate(-15px, -15px);
+
+            #{$blockClass}__hover {
+                display: block;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            #{$blockClass}__name {
+                font-family: $montserrat;
+                font-size: 18px;
+                font-weight: 700;
+                color: $white;
+                text-transform: uppercase;
+
+            }
+
+            #{$blockClass}__icon {
+                display: block;
+                margin: 0 auto;
+            }
+        }
+    }
+}

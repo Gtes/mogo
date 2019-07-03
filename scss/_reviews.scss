@@ -1,0 +1,83 @@
+.reviews{
+    @include image_gradient(90deg, $review_bg_overlay, $review_bg_overlay, $review_bg);
+    background-size: cover;
+    
+    &-container{
+        margin-bottom: 128px;
+        @include clearfix();
+    }
+
+}
+
+.red-line_client {
+    width: 60px;
+    margin: 45px auto;
+    border: 2px solid #f38181;
+    margin: 18px 0;
+}
+
+.client-card {
+    @include clearfix();
+    &__container{
+        
+        @media screen and (max-width: 768px) {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(12);
+            max-width: 600px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            
+            
+          }
+          @media screen and (max-width: 1200px) {
+            @include make-xs-column(12);
+            @include make-sm-column(12);
+            @include make-md-column(12);
+            max-width: 580px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            
+            
+          }
+    }
+    
+    margin-top: 70px;
+    @include make-lg-column(6);
+
+    &__photo {
+        height: 110px;
+        border-radius: 100%;
+        float: left;
+        margin-right: 20px;
+    }
+    &__name {
+        font-size: 14px;
+        color: $title_color;
+        font-family: $montserrat;
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+    &__work {
+        font-size: 15px;
+        line-height: 24px;
+        font-family: $roboto;
+        font-weight: lighter;
+        font-style: italic;
+        color: $block_text;
+    }
+    &__review {
+        font-size: 15px;
+        line-height: 24px;
+        color: $description_color;
+        font-family: $roboto;
+        font-weight: 400;
+    }
+    &__text {
+        float: right;
+        max-width: 380px;
+        margin-top: 12px;
+    }
+
+}
+

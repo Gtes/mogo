@@ -1,0 +1,53 @@
+.services {
+    &__item {
+        @include make-xs-column(12);
+        @include make-sm-column(6);
+        @include make-md-column(6);
+        @include make-lg-column(4);
+        margin: 50px 0;
+
+        @media screen and (max-width: 768px) {
+            max-width: 400px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+        }
+    }
+
+    &__text {
+        float: right;
+        max-width: 270px;
+    }
+
+    &__name {
+        font-family: $montserrat;
+        font-size: 14px;
+        color: $title_color;
+        text-transform: uppercase;
+    }
+
+    &__description {
+        font-family: $roboto;
+        font-size: 15px;
+        line-height: 24px;
+        color: $description_color;
+    }
+
+    &__icon {
+        float: left;
+        padding-left: 20px;
+        padding-top: 5px;
+    }
+
+    &-container {
+        @include clearfix();
+        margin-bottom: 70px;
+    }
+
+    &__hr {
+        @include make-lg-column(12);
+        padding: 0;
+        margin: 0;
+        border-top: 1px solid $services_hr;
+
+    }
+}

@@ -1,0 +1,22 @@
+.gallery_about {
+    margin-top: 45px;
+}
+
+.gallery__link_about {
+    margin-top: 40px;
+
+    &-first {
+        @include gallery_hover($about_first_img);
+    }
+
+    &-second {
+        @include gallery_hover($about_second_img);
+        background-size: cover;
+    }
+
+    &-third {
+        @include gallery_hover($about_third_img);
+        background-size: cover;
+    }
+
+}
