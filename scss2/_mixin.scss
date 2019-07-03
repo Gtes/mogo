@@ -1,3 +1,0 @@
-@mixin image_gradient($deg, $top, $bottom, $img) {
-    background: linear-gradient($deg, $top, $bottom), $img;
-}
